@@ -2,6 +2,7 @@ package org.example;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
@@ -13,10 +14,10 @@ public class AppConfig {
         return car;
     }
     @Bean
-    public CarV carv(){
-        CarV carv = new CarV();
-        carv.setBrand("Honda");
-        carv.setColor("Black");
-        return carv;
+    public Car carv(){
+        Car car = new Car();
+        car.setBrand("Honda");
+        car.setColor("Black");
+        return car;
     }
 }

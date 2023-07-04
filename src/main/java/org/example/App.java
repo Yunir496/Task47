@@ -14,10 +14,10 @@ public class App
     {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Car car = applicationContext.getBean(Car.class);
+        Car car = applicationContext.getBean("car",Car.class);
         System.out.println("Car: " + car);
 
-        CarV carv = applicationContext.getBean(CarV.class);
+        Car carv = applicationContext.getBean("carv",Car.class);
         System.out.println("CarV: " + carv);
     }
 }
